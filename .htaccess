@@ -1,0 +1,19 @@
+# Configuración básica para Apache
+DirectoryIndex index.php index.html
+
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Permitir acceso a archivos PHP
+<Files "*.php">
+    Require all granted
+</Files>
+
+# Configuración de seguridad básica
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Configuración de PHP
+php_flag display_errors On
+php_value error_reporting E_ALL 
